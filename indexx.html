@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --accent: #fd79a8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(45deg, purple, black);
+            color: purple var(--primary);
+            padding: 2rem;
+        }
+        
+        .pricing-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: grey
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .pricing-card {
+            background: linear-gradient(45deg, rgb(14, 14, 14), rgb(17, 0, 17));
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-bottom-left-radius: 16px;
+        }
+        
+        .plan-name {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        
+        .plan-name span {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: white;
+        }
+        .plan-price {
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .plan-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: white;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .plan-features span{
+          font-size: 0.8rem;
+          font-weight: 400;
+          color: white;
+        }
+  
+        .plan-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .plan-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .plan-button {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .primary-button {
+            background: var(--primary);
+            color: purple;
+        }
+        
+        .primary-button:hover {
+            background: var(--dark);
+        }
+        
+        .secondary-button {
+            background: black;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .secondary-button:hover {
+            background: var(--primary);
+            color: purple;
+        }
+        
+        .popular-card {
+            border: 2px solid var(--primary);
+        }
+        
+        @media (max-width: 900px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="pricing-section">
+        <div class="section-header">
+            <h2>Choose a suitable plan</h2>
+            <p>Flexable pricing to suit your business</p>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+                <h3 class="plan-name">Basic<span>(Unbeatable plan for the love of a start up businesses)</span></h3>
+                <div class="plan-price">R2 990<span>/Once off</span></div>
+                <ul class="plan-features">
+                    <li>2-9 Page Web Design</li>
+                    <li>Java Scripting</li>
+                    <li>9-5 Update support</li>
+                    <li>.com/.co.za Web Hosting<span>(R600<span>/year)</span></li>
+                </ul>
+                <a href="https://wa.me/c/27698808362">
+                <button class="plan-button secondary-button">Start</button>
+            </a>
+            </div>
+            
+            <!-- Standard Plan -->
+            <div class="pricing-card">
+                <h3 class="plan-name">Standard<span>(For businesses that are looking to give more details)</span></h3>
+                <div class="plan-price">R3 990 <span>/Once off</span></div>
+                <ul class="plan-features">
+                    <li>10-20 Page Web Design</li>
+                    <li>Java Scripting</li>
+                    <li>3D interactivity</li>
+                    <li>9-5 Update support</li>
+                    <li>.com/.co.za Web Hosting<span>(R600<span>/year)</span></li>
+                </ul>
+                <a href="https://wa.me/c/27698808362">
+                    <button class="plan-button secondary-button">Start</button>
+                </a>
+            </div>
+            
+            <!-- Popular Premium Plan -->
+            <div class="pricing-card popular-card">
+                <div class="popular-tag">Most Selected</div>
+                <h3 class="plan-name">Premium<span>(For complex business models)</span></h3>
+                <div class="plan-price">R13 990<span>/Once off</span></div>
+                <ul class="plan-features">
+                    <li>20-30 Page Web Design</li>
+                    <li>Java Scripting</li>
+                    <li>Brand Kit</li>
+                    <li>9-5 Update support</li>
+                    <li>.com/.co.za Web Hosting<span>(R600<span>/year)</span></li>
+                    
+                </ul>
+                <a href="https://wa.me/c/27698808362">
+                    <button class="plan-button secondary-button">Start</button>
+                </a>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <h3 class="plan-name">Enterprise<span>(Large companies with unusual/newly invented functionality needs)</span></h3>
+                <div class="plan-price">R69 990<span>/Once off</span></div>
+                <ul class="plan-features">
+                  <li>40-60 Page Web Design</li>
+                  <li>Java Scripting</li>
+                  <li>Brand Kit</li>
+                  <li>Advanced Analytics</li>
+                  <li>API Access</li>
+                  <li>9-5 Update support</li>
+                  <li>.com/.co.za Web Hosting<span>(R600<span>/year)</span></li>
+                  <li>Mobile App</li>
+                </ul>
+                <a href="https://wa.me/c/27698808362">
+                    <button class="plan-button secondary-button">Start</button>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
