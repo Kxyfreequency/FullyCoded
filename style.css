@@ -8,18 +8,16 @@ body {
 }
 
 .page {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow-y: hidden;
+  overflow-x: hidden;
   position: relative;
 }
 
 .logo {
-  position: absolute;
-  top: 25vh;
-  right: 20%;
-  margin: 0;
-  padding: 0;
+  text-align: center; /* Centers inline content (like your image) */
+  margin: 0 auto;
   animation: blink 3s infinite, zoom 3s infinite ease-in-out;
   transform-origin: center;
 }
@@ -35,4 +33,9 @@ body {
   50% { transform: scale(1.05); }
 }
 
-/* Page 2 */
+.logo img {
+  max-width: 100%; /* Ensures image doesn't overflow */
+  height: auto;
+  display: block; /* Removes default inline image spacing */
+  margin: 0 auto; /* Centers image */
+}
